@@ -1,0 +1,1 @@
+1. Detect catablog required version
