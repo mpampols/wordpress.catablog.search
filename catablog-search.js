@@ -1,5 +1,21 @@
 // setup everything when document is ready
 jQuery(document).ready(function($) {
+	var mouse_is_inside = false;
+
+	$('#catablogsearch_form').hover(function(){
+        mouse_is_inside=true;
+    }, function(){
+        mouse_is_inside=false;
+    });
+
+    $("body").mouseup(function(){
+        if(! mouse_is_inside) {
+        	$('#catablogsearch_response').hide();
+        } else {
+        	$('#catablogsearch_response').show();
+        }
+    });
+
 	$('#catablogsearch_form').ajaxForm({
 		// handler function for success event
 		success: function(responseText, statusText)

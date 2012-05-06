@@ -33,13 +33,8 @@ function CatablogSearch_Widget($args = array())
 	// extract the parameters
 	extract($args);
 
-	// get our options
-	$options = get_option('catablog_search');
-	$title = $options['catablogsearch_title'];
-
 	// print the theme compatibility code
 	echo $before_widget;
-	echo $before_title . $title . $after_title;
 
 	// include our widget
 	include('catablog-search-widget.php');
@@ -52,13 +47,13 @@ function CatablogSearch_WidgetControl()
 	$options = get_option('catablog_search');
 
 	// handle user input
-	if ( $_POST["catablogsearch_submit"] )
+	if ( $_POST["cs_submit"] )
 	{
-		$options['catablogsearch_title'] = strip_tags( stripslashes( $_POST["catablogsearch_title"]));
+		$options['cs_title'] = strip_tags( stripslashes( $_POST["cs_title"]));
 		update_option('catablog_search', $options);
 	}
 
-	$title = $options['catablogsearch_title'];
+	$title = $options['cs_title'];
 
 	// print out the widget control
 	include('catablog-search-widget-control.php');

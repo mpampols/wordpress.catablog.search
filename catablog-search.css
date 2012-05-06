@@ -10,6 +10,7 @@
 
 input#cs
 {
+	width: 150px;
 	background: url("images/search.png") no-repeat scroll 5px 6px transparent;
     border-radius: 2px 2px 2px 2px;
     font-size: 14px;
@@ -35,7 +36,7 @@ input#catablogsearch_submit
 	margin-top: 4px;
 	padding: 5px 0 12px 12px;
 	position: absolute;
-	max-width:495px;
+	max-width: 248px;
 }
 
 #catablogsearch_response .catablogsearch_result:hover
