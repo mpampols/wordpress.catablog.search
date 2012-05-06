@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
 		// handler function for success event
 		success: function(responseText, statusText)
 		{
-			$('#catablogsearchresponse').html('<span class="success">'+responseText+'</span>');
+			$('#catablogsearch_response').html('<span class="success">'+responseText+'</span>');
 		},
 
 		// handler function for errors
