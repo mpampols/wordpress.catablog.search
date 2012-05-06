@@ -77,7 +77,7 @@ function CatablogSearch_ScriptsAction()
 
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('jquery-form');
-	wp_enqueue_script('catablogsearch_script', $catablogsearch_plugin_url . '/catablog-search.js', array('jquery', 'jquery-form'));
+	wp_enqueue_script('catablogsearch_script', $catablogsearch_plugin_url . '/js/catablog-search.js', array('jquery', 'jquery-form'));
 }
 
 add_action('wp_head', 'CatablogSearch_HeadAction' );
@@ -85,7 +85,7 @@ add_action('wp_head', 'CatablogSearch_HeadAction' );
 function CatablogSearch_HeadAction()
 {
 	global $catablogsearch_plugin_url;
-	echo '<link rel="stylesheet" href="'.$catablogsearch_plugin_url.'/catablog-search.css" type="text/css" />';
+	echo '<link rel="stylesheet" href="'.$catablogsearch_plugin_url.'/css/catablog-search.css" type="text/css" />';
 }
 
 ?>
