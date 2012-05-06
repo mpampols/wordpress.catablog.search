@@ -10,9 +10,9 @@ jQuery(document).ready(function($) {
 
     $("body").mouseup(function(){
         if(! mouse_is_inside) {
-        	$('#catablogsearch_response').hide();
+			$('#catablogsearch_response').hide();
         } else {
-        	$('#catablogsearch_response').show();
+			$('#catablogsearch_response').show();
         }
     });
 
@@ -30,8 +30,7 @@ jQuery(document).ready(function($) {
 			{
 				var data = request.responseText.match(/<p>(.*)<\/p>/);
 				$('#catablogsearch_response').html('<span class="catablogsearch-error">'+ data[1] +'</span>');
-			} else 
-			{
+			} else {
 				$('#catablogsearch_response').html('<span class="catablogsearch-error">An error occurred, please notify the administrator.</span>');
 			}
 		},

@@ -1,20 +1,12 @@
 <?php
 /*
 Plugin Name: Catablog Search
-Version: 0.1
+Version: 0.2 beta
 Description: Adds search feature to Catablog plugin
 Author: Marc Pampols
-Author URI: http://www.marcpampols.com
+Author URI: https://github.com/mpampols/wordpress.catablog.search
 Plugin URI: TODO
 catablog-search
-*/
-
-/* 
-require_once('../catablog/lib/CataBlog.class.php');
-require_once('../catablog/lib/CataBlogItem.class.php');
-require_once('../catablog/lib/CataBlogGallery.class.php');
-require_once('../catablog/lib/CataBlogDirectory.class.php');
-require_once('../catablog/lib/CataBlogWidget.class.php');
 */
 
 /* Version check */
