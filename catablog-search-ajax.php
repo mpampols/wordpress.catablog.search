@@ -5,7 +5,7 @@ global $wp_plugin_catablog_class;
 if ($_POST['cs'])
 {
 	global $wpdb;
-	$product=strtoupper($_POST['cs']);
+	$product=strtoupper(mysql_real_escape_string($_POST['cs']));
 	$ids = $wpdb->get_col("SELECT ID FROM wp_posts WHERE UCASE(post_title) LIKE '%$product%' AND post_type='catablog-items' AND post_status='publish'");
 	echo "<div class=\"catablogsearch_results\">";
 	if ($ids) {
