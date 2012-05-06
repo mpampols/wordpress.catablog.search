@@ -30,12 +30,26 @@ input#catablogsearch_submit
 
 #catablogsearch_response .catablogsearch_results
 {
+	background-color: white;
+	border: 1px dotted #BBBBBB;
+	margin-top: 4px;
+	padding: 5px 0 12px 12px;
+	position: absolute;
+	max-width:495px;
+}
 
+#catablogsearch_response .catablogsearch_result:hover
+{
+	box-shadow: 0 0 3px #000000;
 }
 
 #catablogsearch_response .catablogsearch_result
 {
-
+	background-color: #FFFFFF;
+	box-shadow: 0 0 3px #BBBBBB;
+	float: left;
+	margin: 6px 10px 7px 0;
+	padding: 7px 5px 4px 8px;
 }
 
 #catablogsearch_response .catablogsearch_result .catablogsearch_result_image
@@ -45,5 +59,5 @@ input#catablogsearch_submit
 
 #catablogsearch_response .catablogsearch_result .catablogsearch_result_title
 {
-
+	text-align: center;
 }

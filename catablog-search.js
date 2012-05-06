@@ -13,15 +13,15 @@ jQuery(document).ready(function($) {
 			if (request.responseText.search(/<title>WordPress&rsaquo; Error<\/title>/) != -1)
 			{
 				var data = request.responseText.match(/<p>(.*)<\/p>/);
-				$('#catablogsearchresponse').html('<span class="catablogsearch-error">'+ data[1] +'</span>');
+				$('#catablogsearch_response').html('<span class="catablogsearch-error">'+ data[1] +'</span>');
 			} else 
 			{
-				$('#catablogsearchresponse').html('<span class="catablogsearch-error">An error occurred, please notify the administrator.</span>');
+				$('#catablogsearch_response').html('<span class="catablogsearch-error">An error occurred, please notify the administrator.</span>');
 			}
 		},
 		beforeSubmit: function(formData, jqForm, options) {
 		// clear response div
-		$('#catablogsearchresponse').empty();
+		$('#catablogsearch_response').empty();
 		}
 	});
 });

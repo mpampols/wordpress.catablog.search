@@ -20,10 +20,12 @@ if ($_POST['cs'])
 		$my_query = new WP_Query($args);
 
 		foreach ($ids as $key => $value) {
+			echo "<a href=\"".catablog_get_item($value)->getPermalink()."\">";
 			echo "<div class=\"catablogsearch_result\">";
 			echo "<div class=\"catablogsearch_result_image\"><img src='".$wp_plugin_catablog_class->urls['thumbnails'] . '/' . catablog_get_item($value)->getImage()."' /></div>";
 			echo "<div class=\"catablogsearch_result_title\">".catablog_get_item($value)->getTitle()."</div>";
 			echo "</div>";
+			echo "</a>";
 		}
 
 		wp_reset_query();
