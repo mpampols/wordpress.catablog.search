@@ -1,4 +1,8 @@
 <?php
+/**
+ * This code searches directly to the DB and returns the catablog items matching the title of the query
+ *
+ */
 require_once("../../../wp-config.php");
 global $wp_plugin_catablog_class;
 
@@ -6,7 +10,7 @@ if ($_POST['cs'])
 {
 	global $wpdb;
 	$product=strtoupper(mysql_real_escape_string($_POST['cs']));
-	$ids = $wpdb->get_col("SELECT ID FROM wp_posts WHERE UCASE(post_title) LIKE '%$product%' AND post_type='catablog-items' AND post_status='publish'");
+	$ids = $wpdb->get_col("SELECT ID FROM " . $table_prefix . "posts WHERE UCASE(post_title) LIKE '%$product%' AND post_type='catablog-items' AND post_status='publish'");
 	echo "<div class=\"catablogsearch_results\">";
 	if ($ids) {
 
